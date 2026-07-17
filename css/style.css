@@ -46,3 +46,79 @@ body::before {
     animation: gridMove 10s linear infinite;
 
 }
+
+body::after {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+
+        repeating-linear-gradient(180deg,
+
+            transparent,
+
+            transparent 3px,
+
+            rgba(255, 255, 255, .02) 4px);
+
+    animation: scan 7s linear infinite;
+
+}
+
+.shock {
+
+    position: fixed;
+
+    border: 6px solid #00ff66;
+
+    border-radius: 50%;
+
+    width: 50px;
+
+    height: 50px;
+
+    animation: shock .8s ease-out;
+
+}
+
+#winnerScreen {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0, 0, 0, .85);
+
+    backdrop-filter: blur(10px);
+
+}
+
+.winnerText {
+
+    font-size: 140px;
+
+    color: #00ff66;
+
+    text-shadow:
+
+        0 0 10px #00ff66,
+
+        0 0 30px #00ff66,
+
+        0 0 60px #00ff66;
+
+    animation: winnerPop 1s;
+
+}

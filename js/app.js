@@ -32,3 +32,24 @@ document.addEventListener("keydown", e => {
     console.log(e.key.toLocaleLowerCase(), GameState);
 
 });
+
+
+function animateScore(el, newScore) {
+
+    let current = Number(el.innerText);
+
+    const interval = setInterval(() => {
+
+        current++;
+
+        el.innerText = current;
+
+        if (current >= newScore) {
+
+            clearInterval(interval);
+
+        }
+
+    }, 50);
+
+}

@@ -1,34 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-
-<title>Beyblade X Scoreboard</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/variables.css">
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/components.css">
-<link rel="stylesheet" href="css/animation.css">
-
-</head>
-
 <body>
 
+<div id="background"></div>
+
 <div id="app">
+
+    <section id="readyScreen"></section>
+
+    <section id="battleScreen" class="hidden"></section>
+
+    <section id="winnerScreen" class="hidden"></section>
+
+    <section id="overlay"></section>
+
+    <section id="effectLayer"></section>
 
 </div>
 
 <script src="js/state.js"></script>
-<script src="js/screens.js"></script>
-<script src="js/router.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/effect.js"></script>
+<script src="js/game.js"></script>
 <script src="js/app.js"></script>
 
 </body>
-</html>

@@ -200,112 +200,152 @@
 
 }
 
-.center{
+.center {
 
-display:flex;
+    display: flex;
 
-flex-direction:column;
+    flex-direction: column;
 
-align-items:center;
+    align-items: center;
 
-justify-content:center;
+    justify-content: center;
 
-gap:30px;
-
-}
-
-.round{
-
-font-size:80px;
-
-font-weight:bold;
-
-color:var(--green);
-
-text-shadow:var(--shadow);
+    gap: 30px;
 
 }
 
-.vs{
+.round {
 
-font-size:60px;
+    font-size: 80px;
 
-letter-spacing:8px;
+    font-weight: bold;
 
-position:relative;
+    color: var(--green);
 
-}
-
-.vs::before{
-
-content:"";
-
-position:absolute;
-
-width:240px;
-
-height:3px;
-
-background:var(--green);
-
-transform:rotate(45deg);
-
-left:-70px;
-
-top:35px;
-
-box-shadow:var(--shadow);
+    text-shadow: var(--shadow);
 
 }
 
-.vs::after{
+.vs {
 
-content:"";
+    font-size: 60px;
 
-position:absolute;
+    letter-spacing: 8px;
 
-width:240px;
-
-height:3px;
-
-background:var(--green);
-
-transform:rotate(-45deg);
-
-left:-70px;
-
-top:35px;
-
-box-shadow:var(--shadow);
+    position: relative;
 
 }
 
-.start{
+.vs::before {
 
-padding:20px 40px;
+    content: "";
 
-font-size:24px;
+    position: absolute;
 
-background:transparent;
+    width: 240px;
 
-border:2px solid var(--green);
+    height: 3px;
 
-color:white;
+    background: var(--green);
 
-cursor:pointer;
+    transform: rotate(45deg);
 
-transition:.3s;
+    left: -70px;
 
-font-family:Orbitron;
+    top: 35px;
+
+    box-shadow: var(--shadow);
 
 }
 
-.start:hover{
+.vs::after {
 
-background:var(--green);
+    content: "";
 
-color:black;
+    position: absolute;
 
-box-shadow:var(--shadow);
+    width: 240px;
+
+    height: 3px;
+
+    background: var(--green);
+
+    transform: rotate(-45deg);
+
+    left: -70px;
+
+    top: 35px;
+
+    box-shadow: var(--shadow);
+
+}
+
+.start {
+
+    padding: 20px 40px;
+
+    font-size: 24px;
+
+    background: transparent;
+
+    border: 2px solid var(--green);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    font-family: Orbitron;
+
+}
+
+.start:hover {
+
+    background: var(--green);
+
+    color: black;
+
+    box-shadow: var(--shadow);
+
+}
+
+.panel {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: -150%;
+
+    background:
+
+        conic-gradient(transparent,
+
+            transparent,
+
+            #00ff66,
+
+            transparent,
+
+            transparent);
+
+    animation: borderSpin 5s linear infinite;
+
+}
+
+.panel>* {
+
+    position: relative;
+
+    z-index: 2;
 
 }
