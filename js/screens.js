@@ -1,6 +1,8 @@
-ready() {
+const Screens = {
 
-    return `
+    ready() {
+
+        return `
 
 <div class="screen active">
 
@@ -67,5 +69,26 @@ ${GameState.right.ready ? 'READY' : 'TAP READY'}
 </div>
 
 `;
+
+
+    },
+
+    battle() {
+
+        return `
+
+<div class="screen">
+
+<div class="panel">
+
+<h1>BATTLE</h1>
+
+</div>
+
+</div>
+
+`
+
+    }
 
 }
