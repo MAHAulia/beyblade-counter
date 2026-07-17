@@ -2,18 +2,33 @@ render();
 
 document.addEventListener("keydown", e => {
 
-    if (e.key == "1") {
 
-        GameState.screen = "ready";
-        render();
+    switch (e.key.toLowerCase()) {
 
-    }
+        case "1":
+            GameState.screen = "ready";
+            render();
+            break;
+        case "2":
+            GameState.screen = "battle";
+            render();
+            break;
+        case "a":
+            GameState.left.ready = !GameState.left.ready;
+            render();
+            break;
 
-    if (e.key == "2") {
+        case "l":
+            GameState.right.ready = !GameState.right.ready;
+            render();
+            break;
 
-        GameState.screen = "battle";
-        render();
-
+        case " ":
+            if (GameState.left.ready && GameState.right.ready) {
+                GameState.screen = "battle";
+                render();
+            }
+            break;
     }
 
 });
