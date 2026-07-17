@@ -23,104 +23,159 @@
 
     <div id="app">
 
-        <main class="arena">
+        <main class="battle-ui">
 
-            <!-- PLAYER LEFT -->
-            <section class="player left">
+            <!-- ================= LEFT ================= -->
 
-                <div class="player-name">
-                    VIC
+            <section id="leftSide" class="side left">
+
+                <header class="player-header">
+                    <div class="player-name">
+                        VIC
+                    </div>
+                </header>
+
+                <div class="touch-panel">
+
+                    <div class="avatar-box">
+
+                        <div class="logo">
+                            Z
+                        </div>
+
+                    </div>
+
+                    <div class="ready-text">
+
+                        TAP TO READY
+
+                    </div>
+
                 </div>
 
-                <div class="score-buttons">
+                <footer class="score-panel">
 
-                    <button class="point-btn spin">
+                    <button class="score-btn" data-point="1">
                         <span>SPIN</span>
                         <strong>+1</strong>
                     </button>
 
-                    <button class="point-btn over">
+                    <button class="score-btn" data-point="2">
                         <span>OVER</span>
                         <strong>+2</strong>
                     </button>
 
-                    <button class="point-btn burst">
+                    <button class="score-btn" data-point="2">
                         <span>BURST</span>
                         <strong>+2</strong>
                     </button>
 
-                    <button class="point-btn xtreme">
+                    <button class="score-btn" data-point="3">
                         <span>XTREME</span>
                         <strong>+3</strong>
                     </button>
 
-                </div>
+                </footer>
 
             </section>
 
-            <!-- CENTER -->
+            <!-- ================= CENTER ================= -->
 
             <section class="center">
 
-                <h1 class="round">
-                    R1
-                </h1>
+                <div class="round-box">
 
-                <div class="score-display">
+                    <h1>R1</h1>
 
-                    <div class="score-box">
-                        0
+                </div>
+
+                <div class="score-area">
+
+                    <div class="score-card">
+
+                        <span id="leftScore">0</span>
+
                     </div>
 
                     <div class="vs">
+
                         VS
+
                     </div>
 
-                    <div class="score-box">
-                        0
+                    <div class="score-card">
+
+                        <span id="rightScore">0</span>
+
                     </div>
 
                 </div>
 
-                <div class="status">
+                <div id="statusText" class="status-box">
 
-                    READY
+                    STANDBY
 
                 </div>
 
             </section>
 
-            <!-- PLAYER RIGHT -->
+            <!-- ================= RIGHT ================= -->
 
-            <section class="player right">
+            <section id="rightSide" class="side right">
 
-                <div class="player-name">
-                    YAT
+                <header class="player-header">
+
+                    <div class="player-name">
+
+                        YAT
+
+                    </div>
+
+                </header>
+
+                <div class="touch-panel">
+
+                    <div class="avatar-box">
+
+                        <div class="logo">
+
+                            Z
+
+                        </div>
+
+                    </div>
+
+                    <div class="ready-text">
+
+                        TAP TO READY
+
+                    </div>
+
                 </div>
 
-                <div class="score-buttons">
+                <footer class="score-panel">
 
-                    <button class="point-btn spin">
+                    <button class="score-btn" data-point="1">
                         <strong>+1</strong>
                         <span>SPIN</span>
                     </button>
 
-                    <button class="point-btn over">
+                    <button class="score-btn" data-point="2">
                         <strong>+2</strong>
                         <span>OVER</span>
                     </button>
 
-                    <button class="point-btn burst">
+                    <button class="score-btn" data-point="2">
                         <strong>+2</strong>
                         <span>BURST</span>
                     </button>
 
-                    <button class="point-btn xtreme">
+                    <button class="score-btn" data-point="3">
                         <strong>+3</strong>
                         <span>XTREME</span>
                     </button>
 
-                </div>
+                </footer>
 
             </section>
 

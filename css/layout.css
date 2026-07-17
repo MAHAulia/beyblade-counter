@@ -1,35 +1,302 @@
-.arena{
+.battle-ui {
 
-    width:100%;
-    height:100%;
+    width: 100vw;
 
-    display:grid;
+    height: 100vh;
 
-    grid-template-columns:1fr 380px 1fr;
+    display: grid;
 
-    background:#090909;
+    grid-template-columns: 1fr 420px 1fr;
+
+    background: #080808;
+
+    position: relative;
+
 }
 
-.player{
+.side {
 
-    padding:40px;
+    position: relative;
 
-    display:flex;
+    padding: 30px;
 
-    flex-direction:column;
+    display: grid;
 
-    justify-content:space-between;
+    grid-template-rows: 90px 1fr auto;
+
+    clip-path: polygon(0 0,
+
+            94% 0,
+
+            100% 8%,
+
+            100% 100%,
+
+            0 100%);
+
 }
 
-.center{
+.right {
+
+    clip-path: polygon(6% 0,
+
+            100% 0,
+
+            100% 100%,
+
+            0 100%,
+
+            0 8%);
+
+}
+
+.touch-panel {
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 35px;
+
+}
+
+.touch-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(145deg,
+
+            rgba(37, 255, 105, .12),
+
+            transparent 40%);
+
+}
+
+.logo {
+
+    width: 150px;
+
+    height: 150px;
+
+    border: 4px solid var(--green);
+
+    border-radius: 20px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 72px;
+
+    color: var(--green);
+
+    box-shadow:
+
+        0 0 30px rgba(37, 255, 105, .45);
+
+}
+
+.ready-text {
+
+    color: #22ff66;
+
+    font-size: 28px;
+
+    letter-spacing: 4px;
+
+    opacity: .75;
+}
+
+.score-panel {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+.score-btn {
+
+    height: 72px;
+
+    border: 3px solid #22ff66;
+
+    background: #111;
+
+    color: white;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 24px;
+
+    cursor: pointer;
+
+    font-size: 22px;
+
+    transition: .25s;
+}
+
+.score-btn:hover {
+
+    background: #22ff66;
+
+    color: black;
+}
+
+.round-box h1 {
+
+    color: #22ff66;
+
+    font-size: 64px;
+}
+
+.score-area {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.score-card {
+
+    width: 130px;
+
+    height: 130px;
+
+    border-radius: 18px;
+
+    border: 4px solid var(--green);
+
+    font-size: 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    box-shadow:
+
+        0 0 18px rgba(37, 255, 105, .45),
+
+        inset 0 0 12px rgba(37, 255, 105, .25);
+
+}
+
+.vs {
+
+    font-size: 28px;
+
+    color: #888;
+}
+
+.status-box{
+
+    width:320px;
+
+    height:80px;
+
+    border:3px solid var(--green);
+
+    font-size:34px;
+
+    letter-spacing:6px;
 
     display:flex;
-
-    flex-direction:column;
 
     justify-content:center;
 
     align-items:center;
 
-    gap:40px;
+    background:#111;
+
+    box-shadow:
+
+        0 0 20px rgba(37,255,105,.35);
+
+}
+
+.battle-ui::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 0;
+
+    width: 8px;
+
+    height: 100%;
+
+    background: var(--green);
+
+    transform:
+
+        translateX(-50%) rotate(35deg);
+
+    opacity: .4;
+
+}
+
+.battle-ui::after {
+
+    content: "";
+
+    position: absolute;
+
+    right: 50%;
+
+    top: 0;
+
+    width: 8px;
+
+    height: 100%;
+
+    background: var(--green);
+
+    transform:
+
+        translateX(50%) rotate(-35deg);
+
+    opacity: .4;
+
+}
+
+.side::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 3px solid var(--green);
+
+    pointer-events: none;
+
 }
