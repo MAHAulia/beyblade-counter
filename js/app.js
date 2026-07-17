@@ -1,8 +1,6 @@
 render();
 
 document.addEventListener("keydown", e => {
-
-
     switch (e.key.toLowerCase()) {
 
         case "1":
@@ -30,5 +28,7 @@ document.addEventListener("keydown", e => {
             }
             break;
     }
+
+    console.log(e.key.toLocaleLowerCase(), GameState);
 
 });
