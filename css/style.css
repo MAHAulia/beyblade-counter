@@ -11,7 +11,11 @@ body {
     height: 100%;
 
     background:
-        radial-gradient(circle at center, #1a1a1a 0%, #090909 70%);
+        radial-gradient(circle at center,
+            rgba(45, 255, 99, .08),
+            transparent 60%),
+
+        linear-gradient(#0b0b0b, #050505);
 
     overflow: hidden;
 
@@ -26,16 +30,42 @@ body {
     height: 100vh;
 }
 
-:root{
+:root {
 
-    --green:#25ff69;
+    --green: #25ff69;
 
-    --green-dark:#0d4a22;
+    --green-dark: #0d4a22;
 
-    --black:#080808;
+    --black: #080808;
 
-    --panel:#111;
+    --panel: #111;
 
-    --text:#ffffff;
+    --text: #ffffff;
 
+}
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(
+        rgba(255,255,255,.03) 1px,
+        transparent 1px),
+
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.03) 1px,
+        transparent 1px);
+
+    background-size:40px 40px;
+
+    pointer-events:none;
+
+    opacity:.4;
 }

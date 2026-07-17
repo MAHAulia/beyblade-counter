@@ -52,9 +52,11 @@
 
 .touch-panel {
 
-    position: relative;
+    flex: 1;
 
-    overflow: hidden;
+    margin: 20px 0;
+
+    border: 3px solid var(--green);
 
     display: flex;
 
@@ -64,8 +66,27 @@
 
     align-items: center;
 
-    gap: 35px;
+    gap: 30px;
 
+    position: relative;
+
+    overflow: hidden;
+
+    clip-path: polygon(0 4%,
+
+            4% 0,
+
+            96% 0,
+
+            100% 4%,
+
+            100% 96%,
+
+            96% 100%,
+
+            4% 100%,
+
+            0 96%);
 }
 
 .touch-panel::before {
@@ -74,16 +95,44 @@
 
     position: absolute;
 
-    inset: 0;
+    inset: 12px;
 
-    background:
+    border: 1px solid rgba(45, 255, 99, .35);
 
-        linear-gradient(145deg,
+    clip-path: inherit;
 
-            rgba(37, 255, 105, .12),
+}
 
-            transparent 40%);
+.touch-panel::after {
 
+    content: "";
+
+    position: absolute;
+
+    width: 120px;
+
+    height: 120px;
+
+    top: 20px;
+
+    left: 20px;
+
+    border-top: 4px solid var(--green);
+
+    border-left: 4px solid var(--green);
+
+    opacity: .6;
+}
+
+.right .touch-panel::after {
+
+    left: auto;
+
+    right: 20px;
+
+    border-left: none;
+
+    border-right: 4px solid var(--green);
 }
 
 .logo {
@@ -114,13 +163,14 @@
 
 .ready-text {
 
-    color: #22ff66;
+    font-size: 34px;
 
-    font-size: 28px;
+    letter-spacing: 8px;
 
-    letter-spacing: 4px;
+    font-weight: bold;
 
-    opacity: .75;
+    color: var(--green);
+
 }
 
 .score-panel {
@@ -186,24 +236,23 @@
 
     height: 130px;
 
-    border-radius: 18px;
-
     border: 4px solid var(--green);
 
-    font-size: 70px;
+    clip-path: polygon(0 8%,
 
-    display: flex;
+            8% 0,
 
-    justify-content: center;
+            92% 0,
 
-    align-items: center;
+            100% 8%,
 
-    box-shadow:
+            100% 92%,
 
-        0 0 18px rgba(37, 255, 105, .45),
+            92% 100%,
 
-        inset 0 0 12px rgba(37, 255, 105, .25);
+            8% 100%,
 
+            0 92%);
 }
 
 .vs {
@@ -213,30 +262,33 @@
     color: #888;
 }
 
-.status-box{
+.status-box {
 
-    width:320px;
+    width: 300px;
 
-    height:80px;
+    height: 90px;
 
-    border:3px solid var(--green);
+    font-size: 42px;
 
-    font-size:34px;
+    font-weight: bold;
 
-    letter-spacing:6px;
+    letter-spacing: 8px;
 
-    display:flex;
+    clip-path: polygon(0 15%,
 
-    justify-content:center;
+            8% 0,
 
-    align-items:center;
+            92% 0,
 
-    background:#111;
+            100% 15%,
 
-    box-shadow:
+            100% 85%,
 
-        0 0 20px rgba(37,255,105,.35);
+            92% 100%,
 
+            8% 100%,
+
+            0 85%);
 }
 
 .battle-ui::before {
@@ -269,21 +321,11 @@
 
     position: absolute;
 
-    right: 50%;
+    inset: 12px;
 
-    top: 0;
+    border: 4px solid rgba(45, 255, 99, .35);
 
-    width: 8px;
-
-    height: 100%;
-
-    background: var(--green);
-
-    transform:
-
-        translateX(50%) rotate(-35deg);
-
-    opacity: .4;
+    pointer-events: none;
 
 }
 
