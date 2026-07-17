@@ -1,25 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bey Battle Judge</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animation.css">
+
+</head>
+
 <body>
 
-<div id="background"></div>
+    <div id="app">
 
-<div id="app">
+        <main class="arena">
 
-    <section id="readyScreen"></section>
+            <!-- PLAYER LEFT -->
+            <section class="player left">
 
-    <section id="battleScreen" class="hidden"></section>
+                <div class="player-name">
+                    VIC
+                </div>
 
-    <section id="winnerScreen" class="hidden"></section>
+                <div class="score-buttons">
 
-    <section id="overlay"></section>
+                    <button class="point-btn spin">
+                        <span>SPIN</span>
+                        <strong>+1</strong>
+                    </button>
 
-    <section id="effectLayer"></section>
+                    <button class="point-btn over">
+                        <span>OVER</span>
+                        <strong>+2</strong>
+                    </button>
 
-</div>
+                    <button class="point-btn burst">
+                        <span>BURST</span>
+                        <strong>+2</strong>
+                    </button>
 
-<script src="js/state.js"></script>
-<script src="js/ui.js"></script>
-<script src="js/effect.js"></script>
-<script src="js/game.js"></script>
-<script src="js/app.js"></script>
+                    <button class="point-btn xtreme">
+                        <span>XTREME</span>
+                        <strong>+3</strong>
+                    </button>
+
+                </div>
+
+            </section>
+
+            <!-- CENTER -->
+
+            <section class="center">
+
+                <h1 class="round">
+                    R1
+                </h1>
+
+                <div class="score-display">
+
+                    <div class="score-box">
+                        0
+                    </div>
+
+                    <div class="vs">
+                        VS
+                    </div>
+
+                    <div class="score-box">
+                        0
+                    </div>
+
+                </div>
+
+                <div class="status">
+
+                    READY
+
+                </div>
+
+            </section>
+
+            <!-- PLAYER RIGHT -->
+
+            <section class="player right">
+
+                <div class="player-name">
+                    YAT
+                </div>
+
+                <div class="score-buttons">
+
+                    <button class="point-btn spin">
+                        <strong>+1</strong>
+                        <span>SPIN</span>
+                    </button>
+
+                    <button class="point-btn over">
+                        <strong>+2</strong>
+                        <span>OVER</span>
+                    </button>
+
+                    <button class="point-btn burst">
+                        <strong>+2</strong>
+                        <span>BURST</span>
+                    </button>
+
+                    <button class="point-btn xtreme">
+                        <strong>+3</strong>
+                        <span>XTREME</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script type="module" src="js/app.js"></script>
 
 </body>
+
+</html>
