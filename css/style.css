@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: Orbitron, sans-serif;
+
+    background: #050505;
+
+    color: white;
+
+    overflow: hidden;
+
+    height: 100vh;
+
+}
+
+#app {
+
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+body::before {
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(rgba(0, 255, 100, .05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 100, .05) 1px, transparent 1px);
+
+    background-size: 40px 40px;
+
+    animation: gridMove 10s linear infinite;
+
+}
